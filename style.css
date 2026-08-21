@@ -1,0 +1,1047 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Metal Mania", cursive;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(rgba(5, 0, 5, 0.65),
+            rgba(5, 0, 5, 0.65)),
+        url("imagens/fundo\ preto\ 1\ aveludado.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    color: white;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+nav a {
+    position: relative;
+
+    color: #d8d8d8;
+    text-decoration: none;
+
+    margin: 0;
+    padding: 10px 18px;
+
+    font-size: 21px;
+    font-family: "Metal Mania", cursive;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a::before {
+    content: "◆";
+
+    position: absolute;
+
+    left: 50%;
+    top: -5px;
+
+    transform: translateX(-50%) scale(0);
+
+    color: #a020f0;
+
+    font-size: 8px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 8px #a020f0,
+        0 0 15px rgba(160, 32, 240, 0.5);
+
+    transform: translateY(-2px);
+}
+
+nav a:hover::before {
+    transform: translateX(-50%) scale(1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+h1 {
+    font-family: "Metal Mania", cursive;
+
+    font-size: 90px;
+    letter-spacing: 8px;
+
+    margin: 20px 0 10px;
+
+    color: #f2eaf7;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 15px rgba(160, 32, 240, 0.8),
+        0 0 35px rgba(160, 32, 240, 0.4);
+
+    transition: 0.3s;
+
+    animation: pulsar 3s infinite alternate;
+}
+
+h1:hover {
+    color: white;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 20px #a020f0,
+        0 0 45px rgba(160, 32, 240, 0.7);
+}
+
+@keyframes pulsar {
+    from {
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.3),
+            0 0 12px rgba(160, 32, 240, 0.6),
+            0 0 25px rgba(160, 32, 240, 0.3);
+    }
+
+    to {
+        text-shadow:
+            0 0 8px rgba(255, 255, 255, 0.5),
+            0 0 20px rgba(160, 32, 240, 0.9),
+            0 0 40px rgba(160, 32, 240, 0.5);
+    }
+}
+
+p {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.hero img {
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+
+    box-shadow:
+        0 0 20px rgba(160, 32, 240, 0.5),
+        0 0 60px rgba(160, 32, 240, 0.15);
+
+    transition: 0.4s;
+}
+
+.hero img:hover {
+    transform: scale(1.015);
+
+    box-shadow:
+        0 0 25px rgba(160, 32, 240, 0.7),
+        0 0 80px rgba(160, 32, 240, 0.2);
+}
+
+
+header {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hero {
+    margin-top: 25px;
+    padding: 20px 20px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.hero h2 {
+    font-family: "Metal Mania", cursive;
+
+    font-size: 28px;
+    letter-spacing: 4px;
+
+    color: #a020f0;
+
+    margin-top: 28px;
+    margin-bottom: 0;
+
+    text-shadow: 0 0 10px rgba(160, 32, 240, 0.5);
+}
+
+.hero h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70%;
+    max-width: 500px;
+
+    height: 1px;
+
+    margin: 18px auto 0;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(160, 32, 240, 0.8),
+        transparent
+    );
+}
+
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+
+.banda {
+    margin-top: 100px;
+    padding: 50px 20px;
+
+}
+
+
+.musicas {
+    margin-top: 100px;
+    padding: 50px 20px;
+
+}
+
+.repertorio-grupo {
+    margin-top: 50px;
+}
+
+.repertorio-titulo {
+    font-family: "Metal Mania", cursive;
+
+    font-size: 28px;
+
+    color: #a020f0;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 0 10px rgba(160, 32, 240, 0.4);
+}
+
+.repertorio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.musica-card {
+    position: relative;
+    padding: 25px;
+    text-align: left;
+
+    background-color: #080008;
+
+    border: 1px solid rgba(160, 32, 240, 0.5);
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.musica-card:hover {
+    transform: translateY(-5px);
+    border-color: #a020f0;
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.musica-card .numero {
+    display: block;
+
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+.musica-card strong {
+    display: block;
+
+    font-size: 21px;
+    line-height: 1.3;
+
+    margin-bottom: 7px;
+
+}
+
+.musica-card .artista {
+    display: block;
+
+    color: #b8b8b8;
+    font-size: 15px;
+
+}
+
+.musica-card .tag {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 4px 10px;
+
+    color: #a020f0;
+    border: 1px solid #a020f0;
+    border-radius: 20px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+}
+
+.musica-card.autoral {
+    border-color: rgba(160, 32, 240, 0.8);
+}
+
+.musica-card.autoral:hover {
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+}
+
+@media (max-width: 700px) {
+
+    .ensaios-container {
+    
+        grid-template-columns: 1fr;
+    
+        gap: 20px;
+    }
+
+
+    .repertorio-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .musica-card {
+        padding: 20px;
+    }
+
+
+}
+
+
+
+.shows {
+    margin-top: 100px;
+    padding: 50px 20px;
+}
+
+.shows>p {
+    max-width: 600px;
+    margin: 15px auto 40px;
+    line-height: 1.6;
+}
+
+.shows-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.show-card {
+    width: 380px;
+    min-height: 150px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    padding: 30px;
+
+    background-color: #080008;
+
+    border: 1px solid rgba(160, 32, 240, 0.5);
+    border-radius: 10px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.show-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a020f0;
+
+    box-shadow:
+        0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.show-data {
+    min-width: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 20px;
+
+    border-right: 1px solid rgba(160, 32, 240, 0.4);
+    padding-right: 20px;
+}
+
+.show-data .dia {
+    font-family: "Metal Mania", cursive;
+
+    font-size: 42px;
+    line-height: 1;
+
+    color: #a020f0;
+}
+
+.show-data .mes {
+    margin-top: 5px;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    color: #b8b8b8;
+}
+
+.show-info h3 {
+    margin: 0 0 8px;
+
+    font-family: "Metal Mania", cursive;
+
+    font-size: 24px;
+}
+
+.show-info p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #b8b8b8;
+}
+
+
+
+.site-container {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.integrantes {
+    margin-top: 100px;
+    padding: 50px 20px;
+
+}
+
+.integrantes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.integrante-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    background-color: #080008;
+
+    border: 1px solid rgba(160, 32, 240, 0.5);
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.integrante-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid purple;
+    box-shadow: 0 0 15px purple;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.integrante-card h3 {
+    font-family: "Metal Mania", cursive;
+    font-size: 26px;
+    margin: 20px 0 5px;
+}
+
+.integrante-card:hover h3 {
+    color: #a020f0;
+    text-shadow: 0 0 10px #a020f0;
+}
+
+.integrante-card h4 {
+    display: inline-block;
+
+    margin: 5px 0 15px;
+    padding: 5px 15px;
+
+    color: #a020f0;
+    border: 1px solid #a020f0;
+    border-radius: 20px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.integrante-card:hover h4 {
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px purple;
+}
+
+.integrante-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #d0d0d0;
+    margin-top: 15px;
+}
+
+.integrante-card:hover {
+    transform: translateY(-5px);
+    border-color: #a020f0;
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.integrante-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px purple;
+}
+
+@media (max-width: 700px) {
+    .integrantes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .show-card {
+
+        width: 100%;
+
+        max-width: 350px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contato {
+    margin-top: 100px;
+    padding: 60px 20px;
+
+}
+
+.contato h2 {
+    font-family: "Metal Mania", cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contato>p {
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.contato-card {
+    padding: 25px;
+    background-color: #080008;
+
+    border: 1px solid rgba(160, 32, 240, 0.5);
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.contato-card h3 {
+    font-family: "Metal Mania", cursive;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.contato-card p {
+    font-size: 16px;
+    color: #d0d0d0;
+    margin-top: 10px;
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    border-color: #a020f0;
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+@media (max-width: 700px) {
+
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.contato-icone {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #a020f0;
+
+    transition: 0.3s;
+}
+
+.contato-icone svg {
+    width: 45px;
+    height: 45px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+
+    transition: 0.3s;
+}
+
+.contato-card:hover .contato-icone {
+    transform: translateY(-5px) scale(1.1);
+    color: #c060ff;
+    filter: drop-shadow(0 0 8px #a020f0);
+}
+
+.contato-card:hover .contato-icone svg {
+    stroke-width: 2;
+}
+
+.contato-card {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.contato-card {
+    cursor: pointer;
+    user-select: none;
+}
+
+.contato-card:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.frases-fundo {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.frases-fundo span {
+    position: absolute;
+
+    font-family: "Metal Mania", cursive;
+    font-size: 45px;
+
+    color: rgba(160, 32, 240, 0.06);
+
+    white-space: nowrap;
+
+    transform: rotate(-8deg);
+}
+
+.frases-fundo span:nth-child(1) {
+    top: 18%;
+    left: 5%;
+}
+
+.frases-fundo span:nth-child(2) {
+    top: 40%;
+    right: 5%;
+    transform: rotate(7deg);
+}
+
+.frases-fundo span:nth-child(3) {
+    top: 62%;
+    left: 5%;
+    transform: rotate(5deg);
+}
+
+.frases-fundo span:nth-child(4) {
+    top: 76%;
+    right: 3%;
+    transform: rotate(-6deg);
+}
+
+.frases-fundo span:nth-child(5) {
+    top: 90%;
+    left: 8%;
+    transform: rotate(-4deg);
+}
+
+.frases-fundo span:nth-child(6) {
+    top: 52%;
+    right: 8%;
+    transform: rotate(8deg);
+}
+
+.banda p:last-child {
+    font-size: 22px;
+    font-weight: bold;
+    color: #cfcfcf;
+    text-shadow: 0 0 8px rgba(160, 32, 240, 0.4);
+}
+
+.banda,
+.musicas,
+.integrantes,
+.shows,
+.contato {
+    position: relative;
+    border-top: none;
+}
+
+.banda::before,
+.musicas::before,
+.integrantes::before,
+.shows::before,
+.contato::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+
+    background: linear-gradient(to right,
+            transparent,
+            rgba(160, 32, 240, 0.8),
+            transparent);
+
+}
+
+.rodape {
+    margin-top: 100px;
+    padding: 80px 20px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 0, 5, 0),
+        rgba(0, 0, 0, 0.45) 25%,
+        rgba(0, 0, 0, 0.65)
+    );
+
+    border-top: 1px solid rgba(160, 32, 240, 0.35);
+
+    width: 100vw;
+    box-sizing: border-box;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rodape-estilo {
+    color: #a020f0 !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+
+    text-shadow: 0 0 8px rgba(160, 32, 240, 0.4);
+}
+
+.rodape-linha {
+    display: block;
+
+    width: 60px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background-color: rgba(160, 32, 240, 0.5);
+}
+
+.rodape .copyright {
+    margin: 0;
+
+    color: #666;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+     .integrantes-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .show-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+     .banda p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+    h1 {
+        font-size: 52px;
+        letter-spacing: 4px;
+        line-height: 1.1;
+    }
+
+     nav {
+        gap: 2px;
+        padding: 0 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+    .hero {
+        margin-top: 20px;
+        padding: 20px 10px 60px;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+    }
+
+}
+
+.ensaios {
+    margin-top: 100px;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.ensaios-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 800px;
+
+    margin: 40px auto 0;
+}
+
+.ensaio-card {
+    padding: 20px;
+
+    background-color: #080008;
+
+    border: 1px solid rgba(160, 32, 240, 0.5);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(5, 0, 5, 0.5),
+            rgba(5, 0, 5, 0.8)
+        ),
+        #120012;
+
+    border-radius: 7px;
+
+    color: #a020f0;
+
+    font-size: 50px;
+
+    text-shadow: 0 0 15px #a020f0;
+
+    border: 1px solid rgba(160, 32, 240, 0.3);
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: 0.4s;
+}
+
+.ensaio-card:hover .video-placeholder img {
+    transform: scale(1.05);
+
+    filter: brightness(0.55);
+}
+
+.play-button {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #a020f0;
+    border-radius: 50%;
+
+    color: #a020f0;
+    font-size: 28px;
+
+    padding-left: 4px;
+
+    background-color: rgba(5, 0, 5, 0.7);
+
+    box-shadow:
+        0 0 10px rgba(160, 32, 240, 0.5),
+        inset 0 0 10px rgba(160, 32, 240, 0.2);
+
+    transition: 0.3s;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+.ensaio-card:hover .play-button {
+    transform: scale(1.12);
+    transform: translate(-50%, -50%) scale(1.12);
+
+    color: white;
+
+    border-color: white;
+
+    box-shadow:
+        0 0 15px #a020f0,
+        0 0 30px rgba(160, 32, 240, 0.6);
+}
+
+.ensaio-card {
+    text-decoration: none;
+    color: white;
+    display: block;
+    cursor: pointer;
+}
+
+.ensaio-card h3 {
+    font-size: 25px;
+
+    margin: 18px 0 5px;
+}
+
+.ensaio-card span {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.ensaio-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a020f0;
+
+    box-shadow:
+        0 0 15px rgba(160, 32, 240, 0.5);
+}
+
+.ensaio-card:hover .video-placeholder {
+    color: #c060ff;
+
+    text-shadow:
+        0 0 10px #a020f0,
+        0 0 25px #a020f0;
+}
+
+.ensaios::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 5%;
+
+    width: 90%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(160, 32, 240, 0.8),
+        transparent
+    );
+}
